@@ -11,12 +11,9 @@
 #define MAX_BUFFER_SIZE 1024*1024*5+1024*512
 #define MAX_ORIGIN_FILE_SIZE 1024*1024*4
 
-int maxbuffer = 6 * 1024 * 1024;
-
 #include "main_crypter.h"
 #include "unpack-pbp.h"
 #include "pack-pbp.h"
-
 #include "fix-realocations.h"
 
 char *filename_list[10] = {
@@ -87,7 +84,7 @@ int main(int argc, char *argv[]) {
   remove("data.psar");
   
   // Unpack PBP file
-  err = main_unpack_pbp(infile);
+  err = unpack_pbp(infile);
   if(err != 0) {
     printf("Error while unpacking: %d\n",err);
     clean_tmp();
@@ -95,7 +92,7 @@ int main(int argc, char *argv[]) {
   }
   
   // Fix PRX realocations
-  err = main_fix_realocations();
+  err = fix_realocations();
   if(err != 0) {
     printf("Error while fixing realocations: %d\n",err);
     clean_tmp();
@@ -111,7 +108,7 @@ int main(int argc, char *argv[]) {
   }
 
   // Repacking
-  err = main_pack_pbp(outfile, 10, filename_list);
+  err = pack_pbp(outfile, filename_list);
   if(err != 0) {
     printf("Error while packing: %d\n",err);
     clean_tmp();
