@@ -28,8 +28,11 @@ static int swap_int(int n) {
 #include <string.h>
 #include <stdlib.h>
 
+#ifndef __APPLE__
 #include <malloc.h>
-
+#else
+#include <malloc/malloc.h>
+#endif
 // Struct to describe the header of a PBP file
 struct {
   char signature[4];
