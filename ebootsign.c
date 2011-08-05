@@ -4,8 +4,11 @@
 #include <string.h>
 #include <stdio.h>
 #include <time.h>
+#ifndef __APPLE__
 #include <malloc.h>
-
+#else
+#include <malloc/malloc.h>
+#endif
 #include <sys/unistd.h>
 
 #define MAX_BUFFER_SIZE 1024*1024*5+1024*512

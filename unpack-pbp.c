@@ -18,7 +18,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#ifndef __APPLE__
 #include <malloc.h>
+#else
+#include <malloc/malloc.h>
+#endif
 
 #include "unpack-pbp.h"
 

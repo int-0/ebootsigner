@@ -2,6 +2,10 @@
 	KIRK ENGINE CODE
 	Thx for coyotebean, Davee, hitchhikr, kgsws, Mathieulh, SilverSpring
 */
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "crypto.h"
 
 #include "internal_keys.h"
