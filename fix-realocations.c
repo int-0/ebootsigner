@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#ifndef __APPLE__
 #include <malloc.h>
+#else
+#include <malloc/malloc.h>
+#endif
 
 #include "fix-realocations.h"
 
