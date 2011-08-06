@@ -11,6 +11,10 @@
 #endif
 #include <sys/unistd.h>
 
+#if defined(_MSC_VER) || defined (__MINGW32__)
+#define mkdir(p,m) _mkdir(p)
+#endif
+
 #define MAX_BUFFER_SIZE 1024*1024*5+1024*512
 #define MAX_ORIGIN_FILE_SIZE 1024*1024*4
 
