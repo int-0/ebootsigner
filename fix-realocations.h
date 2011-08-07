@@ -1,7 +1,9 @@
-typedef unsigned int* Elf32_Addr;
-typedef int Elf32_Off;
-typedef int Elf32_Word;
-typedef unsigned short int Elf32_Half;
+#include "types.h"
+
+typedef u32 Elf32_Addr;
+typedef s32 Elf32_Off;
+typedef s32 Elf32_Word;
+typedef u16 Elf32_Half;
 
 #define	EI_NIDENT	16
 
