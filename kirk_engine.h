@@ -1,7 +1,7 @@
 #ifndef KIRK_ENGINE
 #define KIRK_ENGINE
 
-#include "type.h"
+#include "types.h"
 
 //Kirk return values
 #define KIRK_OPERATION_SUCCESS 0
