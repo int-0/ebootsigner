@@ -112,6 +112,8 @@ int kirk_CMD14(void* outbuff, int size);
 int kirk_init(); //CMD 0xF?
 
 //helper funcs
+int kirk_decrypt_keys(u8 *keys, void *inbuff);
+int kirk_forge(u8* inbuff, int insize);
 u8* kirk_4_7_get_key(int key_type);
 
 //kirk "ex" functions
