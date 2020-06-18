@@ -9,7 +9,7 @@
 #else
 #include <malloc/malloc.h>
 #endif
-#include <sys/unistd.h>
+#include <unistd.h>
 
 #if defined(_MSC_VER) || defined (__MINGW32__)
 #define mkdir(p,m) _mkdir(p)
