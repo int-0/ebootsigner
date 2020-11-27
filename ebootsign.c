@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
   const char *filename = argv[1];
   FILE *infile;
   // Try to open given filename
-  infile = fopen(filename, "r");
+  infile = fopen(filename, "rb");
   if (infile == NULL) {
     printf("ERROR: Could not open %s\n", filename);
     return -1;
@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
   char *dest_file = argv[2];
   FILE *outfile;
   remove(dest_file);
-  outfile = fopen(dest_file, "w");
+  outfile = fopen(dest_file, "wb");
   if (outfile == NULL) {
     printf("ERROR: Could not create %s\n", dest_file);
     return -1;
