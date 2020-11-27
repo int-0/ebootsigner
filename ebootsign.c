@@ -12,6 +12,7 @@
 #include <unistd.h>
 
 #if defined(_MSC_VER) || defined (__MINGW32__)
+#include <direct.h>
 #define mkdir(p,m) _mkdir(p)
 #endif
 
