@@ -92,7 +92,7 @@ int main_crypter()
 	memset(out_buffer, 0, MAX_BUFFER_SIZE);
 	memset(kirk_raw, 0, MAX_BUFFER_SIZE);
 	memset(kirk_enc, 0, MAX_BUFFER_SIZE);
-	memset(elf, 0, MAX_BUFFER_SIZE);
+	memset(elf, 0, MAX_ORIGIN_FILE_SIZE);
 
 	kirk_init();
 	int krawSize = 0x553410;
